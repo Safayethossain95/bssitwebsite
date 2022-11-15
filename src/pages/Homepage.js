@@ -7,6 +7,7 @@ import Notice from '../components/Notice'
 import WhyChooseUs from '../components/WhyChooseUs'
 import LearnFromAnywhere from '../components/LearnFromAnywhere'
 import EventAndNews from '../components/EventAndNews'
+import Footer from '../components/Footer'
 const Homepage = () => {
   return (
     <>
@@ -18,6 +19,7 @@ const Homepage = () => {
         <WhyChooseUs/>
         <LearnFromAnywhere/>
         <EventAndNews/>
+        <Footer/>
     </>
   )
 }
