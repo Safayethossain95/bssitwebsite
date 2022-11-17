@@ -8,9 +8,9 @@ const EventAndNews = () => {
             <div className="eventandnews">
                 <h3>Event & News</h3>
                 <Row className="eventcardsall">
-                  <Col lg={6}>
+                  <Col lg={6} md={12} className="eventcardfirst">
                     <div className="eventcardwrapper">
-                      <div className="eventcard">
+                      <div className="eventcard firstoneev">
                         <div className="eventcardimg">
                           <img src="./assets/images/eventcardpic1.png" alt="eventcardpic" />
                           <div className="evcardlabel"><p>OCT 23, 2022</p></div>
@@ -24,9 +24,9 @@ const EventAndNews = () => {
 
                     </div>
                   </Col>
-                  <Col lg={6}>
+                  <Col lg={6} md={12}>
                     <Row>
-                      <Col lg={6}>
+                      <Col lg={6} md={6} className="evxsmgap">
                         <div className="eventcardwrapper">
                             <div className="eventcard">
                               <div className="eventcardimg">
@@ -40,7 +40,7 @@ const EventAndNews = () => {
 
                           </div>
                       </Col>
-                      <Col lg={6}>
+                      <Col lg={6} md={6} className="evxsmgap">
                           <div className="eventcardwrapper">
                             <div className="eventcard">
                               <div className="eventcardimg">
@@ -54,9 +54,7 @@ const EventAndNews = () => {
 
                           </div>
                       </Col>
-                    </Row>
-                    <Row style={{marginTop:"30px"}}>
-                      <Col lg={6}>
+                      <Col lg={6} md={6} className="eventlowercardsmallgap">
                         <div className="eventcardwrapper">
                             <div className="eventcard">
                               <div className="eventcardimg">
@@ -70,7 +68,7 @@ const EventAndNews = () => {
 
                           </div>
                       </Col>
-                      <Col lg={6}>
+                      <Col lg={6} md={6} className="eventlowercardsmallgap">
                           <div className="eventcardwrapper">
                             <div className="eventcard">
                               <div className="eventcardimg">
@@ -81,10 +79,10 @@ const EventAndNews = () => {
                                 <p>Senior KG enjoy their Art and Craft class</p>
                               </div>
                             </div>
-
                           </div>
                       </Col>
                     </Row>
+                    
                   </Col>
                   <CommonButton buttonTitle="View All"/>
                 </Row>

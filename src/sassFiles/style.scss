@@ -21,84 +21,196 @@
         background-color: #ED1C24;
     }
     
-}    
-.bannersmallbox{
-    
-    
-    display: inline-block;
-    width:216px;
-    height:150px;    
-    padding:35px 23px;
-    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.10);
-    -webkit-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.10);
-    -moz-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.10);
-    p{
-        width:181px!important;
-        @include myfont(16px,400,$main_font);
-        margin-top: 3px;
-        span{
-            @include myfont(16px,600,$main_font);
-        }
-    }
-    &.gap{
-        
-        margin-top: 50px;
-    }
-    &.gap2{
-        margin-top:100px;
-        margin-bottom: 30px;
-    }
-           
-}
+}   
+
 .headerwrapper{
     padding:15px;
     align-items: center;
     flex-wrap: inherit;
     justify-content: space-between;
-    width:1296px;
+    width:90%;
     margin:0 auto;
     display: flex;
-        @include media(phone-only){
+        @include media(xsmDevice){
             width:100%;
         }
+    @include media(smDevice){
+        width:100%;
+    }
+    @include media(mdDevice){
+        width:100%;
+    }
+    @include media(lgDevice){
+        width:90%;
+    }
+    
+        .navabrbutton{
+            button{
+
+                @include media(xsmDevice){
+                    margin:0 auto;
+                    margin-top: 20px;
+                }
+                @include media(smDevice){
+                    margin:0 auto;
+                    margin-top: 20px;
+                }
+                @include media(mdDevice){
+                    margin:0 auto;
+                    margin-top: 20px;
+                }
+            }
+        }
+    
 }
 .headerinfoleft{
+    @include media(xsmDevice){
+        display: flex;
+        flex-direction: column;
+    }
+    @include media(smDevice){
+        display: flex;
+        flex-direction: column;
+    }
+    @include media(mdDevice){
+        display: flex;
+        flex-direction: row;
+    }
     span{
         @include myfont(16px,400,$main_font);
     }
+    .hinfo{
+        display: inline-block;
+        margin-right: 16px;
+        span{
+            @include media(xsmDevice){
+                font-size: 14px;
+            }
+        }
+    }
+   
 }
 .headerinforight{
+    text-align: right;
     a{
         @include myfont(16px,400,$main_font);
         text-decoration: none;
         color:#000;
+        @include media(xsmDevice){
+            font-size: 14px;
+        }
+    }
+    @include media(xsmDevice){
+        display: flex;
+        flex-direction: column;
     }
 }
 .mynavbar{
     position: absolute;
     top:0;
     left:0;
-
+    z-index: 999;
     
     .navbar-nav{
         margin-left: 16px;
-        a{
-            font-family:$main_font;
+        a{            
+            @include myfont(18px,400,$main_font);
             color:$main_font_color;
-            font-weight: 400;
-            font-size: 18px;
             margin:0 15px;
             padding:0; 
             transition:0.4s; 
             &:hover{
                 color:#ED1C24;
-            }        
+            }   
+            @include media(xsmDevice){
+                margin:5px 0;
+                
+            }
+            @include media(smDevice){
+                margin:5px 0;
+                
+            }
+            @include media(mdDevice){
+                margin:5px 0;
+                
+            }
+            @include media(lgDevice){
+                @include myfont(14px,400,$main_font);
+            }
+        }
+        @include media(xsmDevice){
+            margin-left: 0;
+            text-align: center;
+        }
+        @include media(smDevice){
+            margin-left: 0;
+            text-align: center;
+        }
+        @include media(mdDevice){
+            margin-left: 0;
+            text-align: center;
         }
     }
    
 }
 
 .mybanner{
+    .bannersmallboxcenter{
+        @include media(xsmDevice){
+            text-align: center;
+        }
+        @include media(smDevice){
+            text-align: unset;
+        }
+        .bannersmallbox{
+            
+            
+            display: inline-block;
+            width:216px;
+            height:150px;    
+            padding:35px 20px;
+            box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.10);
+            -webkit-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.10);
+            -moz-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.10);
+        
+            @include media(xsmDevice){
+                width:auto;
+                margin: 0 auto;
+            }
+            @include media(lgDevice){
+                width:unset;
+                height:unset;
+            }
+            p{
+                width:181px!important;
+                @include myfont(16px,400,$main_font);
+                margin-top: 3px;
+                span{
+                    @include myfont(16px,600,$main_font);
+                }
+                @include media(lgDevice){
+                    width:unset!important;
+                }
+            }
+            &.gap{
+                
+                margin-top: 50px;
+                @include media(xsmDevice){
+                    margin-top: 30px;
+                    
+                }
+            }
+            &.gap2{
+                margin-top:100px;
+                margin-bottom: 30px;
+                @include media(xsmDevice){
+                    margin-top: 30px;
+                }
+            }
+                   
+        }
+    
+    } 
     padding:20px 0;
     .main_image{
         position: relative;
@@ -107,14 +219,49 @@
             top: -68px;
             right: -57px;
             height: 676px; 
-            z-index: 999;           
+            z-index: 999; 
+            @include media(xsmDevice){
+                top: -36px;
+                right: 50%;
+                transform: translateX(50%);
+            }
+            @include media(smDevice){
+                top: -672px;
+                right: 29%;
+                transform: translateX(50%);
+            }
+            @include media(mdDevice){
+                top: -672px;
+                right: 29%;
+                transform: translateX(50%);
+            }
         }
         
     }
     h3{
         @include myfont(60px,600,$main_font);
+        @include media(xsmDevice){
+            
+            @include myfont(30px,600,$main_font);
+        }
+        @include media(smDevice){
+            @include myfont(45px,600,$main_font);
+        }
+        @include media(lgDevice){
+            @include myfont(50px,600,$main_font);
+        }
         span{
             @include myfont(60px,700,$main_font);
+            @include media(xsmDevice){
+                
+                @include myfont(32px,600,$main_font);
+            }
+            @include media(smDevice){
+                @include myfont(50px,600,$main_font);
+            }
+            @include media(lgDevice){
+                @include myfont(53px,600,$main_font);
+            }
 
         }
     }
@@ -124,18 +271,26 @@
             top:104px;            
             right:-344px;
             height:735px;
+            z-index: -1;
         }
     }
     .bannertext{
         p{
             @include myfont(16px,400,$main_font);
-            width:653px;
+            width:87%;
+            @include media(xsmDevice){
+                width:100%;
+            }
+           
         }
         .common_button{
             button{
                 padding:16px 64px;
                 margin-top: 15px;
                 margin-bottom: 60px;
+                @include media(xsmDevice){
+                    padding: 12px 34px;
+                }
             }
         }
     }
@@ -143,21 +298,94 @@
 }
 
 .aboutus{
+    @include media(xsmDevice){
+        margin-top: 590px;
+        padding:70px 0 0 0;
+    }
+    @include media(smDevice){
+        margin-top: 0px;
+        padding:70px 0 0 0;
+    }
     h3{
         text-align: center;
         @include myfont(40px,600,$main_font);
     }
+    .aboutustext2{
+        p{
+            @include media(xsmDevice){
+                width:100%;
+            }
+            @include media(smDevice){
+                width:100%;
+            }
+            @include media(mdDevice){
+                line-height: 30px;
+                text-align: left;
+            }
+        }
+        
+            @include media(mdDevice){
+                text-align: center;
+            }
+        
+    }
     .aboutuscontent{   
-        padding:50px 0;         
+        img{
+            @include media(xsmDevice){
+                margin-bottom: 40px;
+                width:100%;
+            }
+            @include media(smDevice){
+                margin-bottom: 40px;
+                width:100%;
+            }
+            @include media(mdDevice){
+                margin-bottom: 40px;
+                width:100%;
+                
+            }
+            @include media(mdDevice){
+                
+                width:85%;
+                
+            }
+            @include media(lgDevice){
+                width:90%;
+            }
+        }
+        padding:50px 0;  
+        @include media(xsmDevice){
+            padding: 20px 0;
+        }
+        @include media(mdDevice){
+            padding: 50px 0 0 0;
+        }
         .aboutustext{
             p{
                 @include myfont(16px,400,$main_font);
                 line-height: 30px;
                 width:107%;
+                @include media(xsmDevice){
+                    width:100%;
+                }
+                @include media(smDevice){
+                    width:100%;
+                }
+                @include media(mdDevice){
+                    line-height: 30px;
+                }
             }
             button{
                 padding:16px 65px!important;
                 margin-top:40px;
+                @include media(xsmDevice){
+                    padding:16px 32px!important;
+                    margin:0 auto;
+                }
+                @include media(smDevice){
+                    padding:16px 32px!important;
+                    margin:0 auto;
+                }
             }
         }
     }
@@ -169,9 +397,22 @@
     padding: 20px 0;
     .noticecontent{
         padding:70px 0;
+        @include media(xsmDevice){
+            padding: 35px 0;
+        }
+        @include media(smDevice){
+            padding: 0;
+        }
+        @include media(mdDevice){
+            padding: 35px 0 0 0;
+        }
         button{
             margin:65px auto 0px auto;
             padding:16px 42px;
+            @include media(xsmDevice){
+                margin:0px auto 0px auto;
+                
+            }
         }
         .noticebox{
             border:1px solid rgba(0, 0, 0,0.2);
@@ -179,6 +420,24 @@
             height:350px;
             border-radius: 20px;
             padding:27px 22px;
+            @include media(xsmDevice){
+                width:100%;
+                height: auto;
+                margin-bottom: 25px!important;
+            }
+            @include media(lgDevice){
+                width:100%;
+                height: auto;
+                margin-bottom: 25px!important;
+            }
+            &.noticelastbox{
+                @include media(mdDevice){
+                    margin-top: 35px !important;
+                }
+            }
+            @include media(smDevice){
+                margin-top: 35px!important;
+            }
             .noticeheading{
                 h4{
                     @include myfont(20px,500,$main_font);
@@ -190,6 +449,13 @@
             }
             p{
                 width:230px;
+                @include myfont(16px,400,$main_font);
+                @include media(xsmDevice){
+                    width:100%;
+                }
+                @include media(lgDevice){
+                    width:96%;
+                }
             }
         }
     }
@@ -202,28 +468,64 @@
 
 .whychooseus{
     padding:50px 0;
+    @include media(xsmDevice){
+        padding:0;
+    }
     h3{
         text-align: center;
         @include myfont(40px,600,$main_font);
     }
     .wcuheadingp{
         p{
+            padding:0 118px;
             text-align: center;
             @include myfont(16px,400,$main_font);
             color:rgba(0,0,0,0.70);
             line-height: 35px;
+            @include media(xsmDevice){
+                line-height:30px;
+            }
+            @include media(xsmDevice){
+                padding: 0 27px;
+            }
+            @include media(smDevice){
+                padding: 0 72px;
+            }
+            @include media(mdDevice){
+                padding: 0 72px;
+            }
+            @include media(lgDevice){
+                padding: 0 50px;
+            }
         }
     }
     .wcucontent{
         &.wcugapup{
             margin-top: 105px;
-
+            @include media(xsmDevice){
+                margin-top: 30px;
+            }
+            @include media(smDevice){
+                margin-top: 35px;
+            }
+            @include media(mdDevice){
+                margin-top: 35px;
+            }
         }
-        &.wcugapsmall{
+        .wcugapsmall{
             margin-top: 33px;
+            @include media(xsmDevice){
+                margin-top: 0;
+            }
+            @include media(smDevice){
+                margin-top: 0;
+            }
+            @include media(mdDevice){
+                margin-top: 0;
+            }
         }
         .wcubox{
-            width:362px;
+            width:100%;
             height:216px;
             border:1px solid rgba(0, 0, 0,0.2);
             border-radius: 20px;
@@ -231,26 +533,92 @@
             p{
                 @include myfont(16px,400,$main_font); 
                 margin-top: 13px;
+                @include media(xsmDevice){
+                    margin-bottom: 0;
+                }
+            }
+            @include media(xsmDevice){
+                width:auto;
+                height: 185px;
+                padding: 30px 26px;
+                margin-bottom: 33px;
+            }            
+            @include media(smDevice){
+                width:auto;
+                height: 185px;
+                padding: 30px 26px;
+                margin-bottom: 33px;
+            }   
+            @include media(mdDevice){
+                width:auto;
+                margin-bottom: 30px;
             }
         }
 
     }
 }
 .learnfaw{
-    padding:100px 0;
+    margin:100px 0;
+    @include media(xlgDevice){
+        position:relative;
+
+    }
+    @include media(xsmDevice){
+        margin: 0;
+    }
+    @include media(smDevice){
+        margin: 0;
+    }
+    @include media(mdDevice){
+        margin: 0;
+    }
     .learnleftimg{
         img{
             width:100%;
         }
     }
     .learnright{
+        @include media(xlgDevice){
+            position: absolute;
+            right: 0;
+            bottom: 40px;
+        }
+            
+        
         h3{
             @include myfont(40px,600,$main_font); 
             margin-top: 115px;
+            @include media(xsmDevice){
+                margin-top: 30px;
+                text-align: center;
+            }
+            @include media(smDevice){
+                margin-top: 30px;
+                text-align: center;
+            }
+            @include media(mdDevice){
+                margin-top: 30px;
+                text-align: center;
+            }
+            @include media(lgDevice){
+                margin-top: 0;
+            }
         }
         p{
             margin-top: 15px;
-            @include myfont(18px,400,$main_font); 
+            @include myfont(18px,400,$main_font);
+            @include media(xsmDevice){
+                
+                text-align: center;
+            }
+            @include media(smDevice){
+                
+                text-align: center;
+            }
+            @include media(mdDevice){
+                
+                text-align: center;
+            } 
         }
         .blackbuttons{
             margin-top: 45px;
@@ -275,6 +643,24 @@
                         @include myfont(11px,600,$main_font); 
     
                     }
+                    text-align: left;
+                }
+                @include media(xsmDevice)                {
+                    margin: 10px auto;
+
+                }
+                @include media(lgDevice){
+                    margin-left: auto;
+                    margin-bottom: 20px;
+                }
+                &.blackbuttonlg2{
+                    @include media(lgDevice){
+                        margin-left: 30px;
+                    }
+                    @include media(xlgDevice){
+                        margin-left: 15px;
+                    }
+
                 }
             }
 
@@ -290,16 +676,47 @@
 
     .eventcardsall{
         padding:60px 0;
+        .eventcardfirst{
+            @include media(mdDevice){
+                margin-bottom: 30px;
+            }
+           
+        }
         button{
             margin:0 auto;
             margin-top: 60px;
             padding:16px 42px;
+        }
+        .eventlowercardsmallgap{
+            margin-top: 30px;
+        }
+        .evxsmgap{
+            @include media(xsmDevice){
+                margin-top: 30px;
+            }
+            @include media(smDevice){
+                margin-top: 30px;
+            }
         }
         .eventcardwrapper{
             width:100%;
             border:1px solid rgba(0, 0, 0,0.2);
             border-radius: 20px;        
             .eventcard{
+                @include media(lgDevice){
+                    height: 270px;
+                }
+                @include media(xlgDevice){
+                    height: 270px;
+                }
+                &.firstoneev{
+                    @include media(lgDevice){
+                        height: 572px;
+                    }
+                    @include media(xlgDevice){
+                        height: 572px;
+                    }
+                }
                 .eventcardimg{
                     position:relative;
                     img{
@@ -313,16 +730,32 @@
                         align-items: center;
                         position:absolute;
                         bottom:0;
-                        left:47px;
+                        left:42px;
                         height: 47px;
                         width:168px;
                         transform:translateY(50%);
                         background: #ED1C24;
                         border-radius: 48px;
+                        @include media(xsmDevice){
+                            left:25px;
+                        }
+                        @include media(lgDevice){
+                            width:128px;
+                            left:30px;
+                        }
                         p{
                             @include myfont(18px,600,$main_font); 
                             margin-bottom: 0;
                             color:#fff;
+                            @include media(xsmDevice){
+                                @include myfont(16px,600,$main_font); 
+                            }
+                            @include media(smDevice){
+                                @include myfont(16px,600,$main_font); 
+                            }
+                            @include media(lgDevice){
+                                @include myfont(15px,600,$main_font); 
+                            }
                         }
                         &.smallleft{
                             left:25px;
@@ -331,18 +764,41 @@
                 }
                 .eventcardtext{
                     h4{
-                        @include myfont(25px,500,$main_font); 
+                        @include myfont(25px,500,$main_font);
+                        @include media(xsmDevice){
+                            
+                            @include myfont(18px,500,$main_font);
+                        }
                     }
                     p{
                         @include myfont(16px,400,$main_font); 
                         color: rgba(0,0,0,0.70);
+                        @include media(xsmDevice){
+                            
+                            @include myfont(14px,500,$main_font);
+                        }
                     }
                     padding:60px 65px 52px 39px;
+                    @include media(xsmDevice){
+                        padding: 60px 30px 14px 30px;
+                    }
+                    @include media(lgDevice){
+                        padding: 60px 30px 30px 30px;
+                    }
                     &.smallcard{
                         padding:40px 16px 37px 24px;
                         p{
                             @include myfont(16px,500,$main_font); 
                             margin-bottom: 0;
+                            @include media(xsmDevice){
+                            
+                                @include myfont(14px,500,$main_font);
+                            }
+                        }
+                        @include media(lgDevice){
+                            
+                            
+                            @include myfont(14px,500,$main_font);
                         }
                     }
                 }
@@ -366,6 +822,9 @@
                 @include myfont(16px,400,$main_font);
                 color: $contactinfo_font_color; 
                 margin-bottom: 0;
+                @include media(xsmDevice){
+                    @include myfont(14px,400,$main_font);
+                }
             }
         }
         .socialicons{
@@ -381,18 +840,70 @@
         }
         .footersmall{
             margin-top: 80px;
+            @include media(smDevice){
+                margin-top: 35px;
+            }
+            @include media(xsmDevice){
+                margin-top: 35px;
+            }
+            @include media(mdDevice){
+                margin-top: 35px;
+            }
             .footersmallleft{
+                @include media(xsmDevice){
+                    display: flex;
+                    justify-content: space-between;
+                }
+                @include media(smDevice){
+                    display: flex;
+                    justify-content: space-between;
+                }
+                @include media(mdDevice){
+                    display: flex;
+                    justify-content: space-between;
+                }
+                @include media(lgDevice){
+                    display: flex;
+                }
                 img{
                     margin-right: 20px;
+                    @include media(lgDevice){
+                        height: 25px;
+                    }
                 }
             }
             .footersmallright{
                 text-align: right;
+                @include media(xsmDevice){
+                    text-align: center;
+                    
+                }
+                @include media(smDevice){
+                    text-align: center;
+                    
+                }
+                @include media(mdDevice){
+                    text-align: center;
+                    
+                }
             }
             .footersmallmiddle{
                 p{
                     color:$contactinfo_font_color;
                     @include myfont(15px,400,$footer_another_font);
+
+                    @include media(xsmDevice){
+                        margin-top: 30px;
+
+                    }
+                    @include media(smDevice){
+                        margin-top: 30px;
+
+                    }
+                    @include media(mdDevice){
+                        margin-top: 30px;
+
+                    }
                 }
             }
         }

@@ -8,7 +8,7 @@ const Notice = () => {
             <div className="noticepart">
                 <h3>Notice</h3>
                 <Row className="noticecontent">
-                    <Col lg={4}>
+                    <Col lg={4} md={6}>
                         <div className="noticebox m-auto">
                             <div className="noticeheading">
                                 <h4><span>07</span> Nov, 2022 </h4>
@@ -19,7 +19,7 @@ const Notice = () => {
                                 the significance of increased awareness about cancer</p>
                         </div>
                     </Col>
-                    <Col lg={4}>
+                    <Col lg={4} md={6}>
                         <div className="noticebox m-auto">
                             <div className="noticeheading">
                                 <h4><span>14</span> Dec, 2022 </h4>
@@ -30,8 +30,8 @@ const Notice = () => {
                                 the significance of increased awareness about cancer</p>
                         </div>
                     </Col>
-                    <Col lg={4}>
-                        <div className="noticebox m-auto">
+                    <Col lg={4} md={12}>
+                        <div className="noticebox m-auto noticelastbox">
                             <div className="noticeheading">
                                 <h4><span>16</span> Dec, 2022 </h4>
                             </div>

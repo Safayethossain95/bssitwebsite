@@ -26,11 +26,11 @@ const Footer = () => {
                 </div>
                 <div className="footersmall">
                     <Row>
-                        <Col lg={3} className="footersmallleft">
+                        <Col lg={4} className="footersmallleft">
                             <img src="./assets/images/bclogo.png" alt="bclogo" />
                             <img src="./assets/images/edexcellogo.png" alt="edexcellogo" />
                         </Col>
-                        <Col lg={6} className="footersmallmiddle text-center">
+                        <Col lg={5} className="footersmallmiddle text-center">
                             <p>&copy; This website is copyrighted by BSSIT 2004 - 2022 </p>
                         </Col>
                         <Col lg={3} className="footersmallright">

@@ -13,19 +13,19 @@ const Banner = () => {
                 <div className="bannersmallboxwrapper">
                                   
                  <Row>
-                  <Col lg={4}>
+                  <Col lg={4} xs={12} className="bannersmallboxcenter">
                     <div className='bannersmallbox' >         
                         <img src="./assets/images/smallvectorbanner1.png" alt="" />
                         <p><span>1000+</span>"Student from all over the Dhaka city"</p>
                     </div>                  
                   </Col>
-                  <Col lg={4}>
+                  <Col lg={4} xs={12} className="bannersmallboxcenter">
                   <div className='bannersmallbox gap' >         
                       <img src="./assets/images/smallvectorbanner2.png" alt="" />
                       <p><span>1000+</span>"Student from all over the Dhaka city"</p>
                   </div>
                   </Col>
-                  <Col lg={4}>
+                  <Col lg={4} xs={12} className="bannersmallboxcenter">
                     <div className='bannersmallbox gap2' >         
                         <img src="./assets/images/smallvectorbanner3.png" alt="" />
                         <p><span>1000+</span>"Student from all over the Dhaka city"</p>
