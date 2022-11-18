@@ -8,11 +8,20 @@
     align-items: center;
     button{
         background:#ED1C24;
+        
         border:none;
+        border:1px solid #ED1C24;
         padding: 16px 32px;
+        
         @include myfont(16px,500,$button_font);
+        position: relative;
+        
         &:hover{
-            background-color: #ED1C24;
+            background-color: rgba(255, 255, 255, 0.733);
+            color:#000;
+            box-sizing: border-box;
+            border:1px solid #ED1C24;
+
         }
         border-radius: 10px;
         
@@ -113,31 +122,41 @@
     
     .navbar-nav{
         margin-left: 16px;
-        a{            
-            @include myfont(18px,400,$main_font);
-            color:$main_font_color;
-            margin:0 15px;
-            padding:0; 
-            transition:0.4s; 
-            &:hover{
-                color:#ED1C24;
-            }   
-            @include media(xsmDevice){
-                margin:5px 0;
+       
+              
+                a{
+                    @include myfont(18px,400,$main_font);
+                    color:$main_font_color;
+                    margin:0 15px;
+                    padding:0; 
+                    transition:0.4s;
+                    
+                    display: inline-block;
+                    text-decoration: none;
+                    &:hover{
+                        color:#ED1C24;
+                        text-shadow: 0 0 1px #ED1C24, 0 0 1px #ED1C24;
+                    }  
+                  
+                    @include media(xsmDevice){
+                        margin:5px 0;
+                        
+                    }
+                    @include media(smDevice){
+                        margin:5px 0;
+                        
+                    }
+                    @include media(mdDevice){
+                        margin:5px 0;
+                        
+                    }
+                    @include media(lgDevice){
+                        @include myfont(14px,400,$main_font);
+                    }
                 
             }
-            @include media(smDevice){
-                margin:5px 0;
-                
-            }
-            @include media(mdDevice){
-                margin:5px 0;
-                
-            }
-            @include media(lgDevice){
-                @include myfont(14px,400,$main_font);
-            }
-        }
+        
+        
         @include media(xsmDevice){
             margin-left: 0;
             text-align: center;
@@ -164,7 +183,7 @@
         }
         .bannersmallbox{
             
-            
+            border-radius: 20px;
             display: inline-block;
             width:216px;
             height:150px;    
@@ -420,6 +439,11 @@
             height:350px;
             border-radius: 20px;
             padding:27px 22px;
+            transition: 0.4s;
+            &:hover{
+                background-color: #ED1C24;
+                color:#fff;
+            }
             @include media(xsmDevice){
                 width:100%;
                 height: auto;
