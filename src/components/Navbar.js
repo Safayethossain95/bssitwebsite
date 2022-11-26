@@ -4,7 +4,7 @@ import CommonButton from './subComponents/CommonButton'
 const Mynavbar = () => {
   return (
     <>
-        <Navbar className="mynavbar" expand="lg">
+        <Navbar id="navbar" className="mynavbar" expand="lg">
             
             <div className="headerwrapper">
                 <Navbar.Brand href="#home">

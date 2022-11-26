@@ -14,7 +14,21 @@ a{
 .myContainer{
     width:80%;
     margin:0 auto;
+    @include media(xxlgDevice){
+        width:1152px;
+    }
+}
+.myContainerMini{
+    width:1006px;
+    margin:0 auto;
 }
 p{
     margin-bottom: 0;
+}
+
+.sticky {
+  position: fixed!important;
+  top: 0;
+  width: 100%;
+  background:#fff;
 }

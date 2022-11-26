@@ -84,7 +84,7 @@ const EventAndNews = () => {
                     </Row>
                     
                   </Col>
-                  <CommonButton buttonTitle="View All"/>
+                  <CommonButton eventbt="eventbt" buttonTitle="View All"/>
                 </Row>
                 
             </div>

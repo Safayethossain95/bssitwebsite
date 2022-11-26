@@ -1,39 +1,214 @@
-@import '../sassStyles/global';
-@import '../sassStyles/variables';
 @import '../sassStyles/mixins';
+@import '../sassStyles/variables';
 @import '../sassStyles/typography';
+@import '../sassStyles/global';
+a,
+a:hover,
+a:focus { text-decoration: none;
+     -webkit-transition: 0.3s linear;
+      -moz-transition: 0.3s linear;
+       -ms-transition: 0.3s linear;
+        -o-transition: 0.3s linear;
+         transition: 0.3s linear; 
+        }
 
-.common_button{
+
+.read-more > a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #ED1C24;
+    display: inline-block;
+    @include myfont(16px,500,$button_font);
+    border-radius: 10px;
+   
+    padding: 16px 32px;
+    position: relative;
+    
+  }
+
+  .read-more > a:hover {
+    color: #ffffff;
+  }
+  
+
+//
+  .noticebox {
+    text-decoration: none;
+    color: #000;
+    
+    display: inline-block;
+    @include myfont(16px,500,$button_font);
+    border-radius: 10px;
+    overflow: hidden;
+    
+    position: relative;
+    -webkit-transition: 0.5s linear;
+    -moz-transition: 0.5s linear;
+    -ms-transition: 0.5s linear;
+    -o-transition: 0.5s linear;
+    transition: 0.5s linear;
+  }
+  .noticebox> span {
+    background-color: #ED1C24;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    color: #fff;
+    display: block;
+    height: 0;
+    position: absolute;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    -webkit-transition: height 0.5s, width 0.5s;
+    -moz-transition: height 0.5s, width 0.5s;
+    -ms-transition: height 0.5s, width 0.5s;
+    -o-transition: height 0.5s, width 0.5s;
+    transition: height 0.5s, width 0.5s;
+    width: 0;
+    z-index: -1;
+  }
+  .noticebox:hover {
+    color: #ffffff;
+  }
+  .noticebox:hover > span {
+    height: 1000px;
+    width: 1000px;
+  }
+  .read-more .hiddenhover{
+    position:absolute;
+    width:100%;
+    height: 100%;
+    z-index: 999;
+    left:0;
+    top:0;
     display: flex;
     align-items: center;
-    button{
-        background:#ED1C24;
-        
-        border:none;
-        border:1px solid #ED1C24;
-        padding: 16px 32px;
-        
-        @include myfont(16px,500,$button_font);
-        position: relative;
-        
-        &:hover{
-            background-color: rgba(255, 255, 255, 0.733);
-            color:#000;
-            box-sizing: border-box;
-            border:1px solid #ED1C24;
+    justify-content: center;
+  }
 
+.eventbt{
+    text-align: center;
+    padding-top: 50px;
+}
+.bannerbutton {
+    padding-top: 10px;
+    padding-bottom: 60px;
+        &>a{
+            padding:16px 64px !important;
         }
+   }
+
+.itest{
+    button{
+        position: absolute;
+        display: inline-block;    
+        color:#000;
+        text-decoration: none;
+        font-size: 20px;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 20px 50px;
+        margin: 10px;
+        letter-spacing: 2px;
+        border-radius:40px;
+        // overflow: hidden;
+        span{
+            position: absolute;
+            transform:translate(-50%,-50%);
+            background: #ffff;
+            pointer-events:none;
+            border-radius:50%;
+            animation: animate 1s linear infinite;
+                }
+                @keyframes animate {
+                0%{
+                    width: 0;
+                    height: 0;
+                    opacity: 0.2;
+                }
+                100%{
+                    width: 500px;
+                    height: 500px;
+                    opacity: 0;
+                }
+                }
+    }
+}
+
+
+.common_button{
+   
+    button{
+       
+        position: relative;
+        display: inline-block;            
+        text-decoration: none;
+        font-size: 20px;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 20px 50px;
+        margin: 10px;
+        letter-spacing: 2px;
+        border-radius:40px;
+        color:#fff;
+        background:#ED1C24;        
+           
+        padding: 16px 32px;
         border-radius: 10px;
+        @include myfont(16px,500,$button_font);        
+        
+        position: relative;
+        display: inline-block;          
+        transition: .6s;       
+        span {
+            position: absolute;
+            background: #fff;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            border-radius: 50%;
+            animation: animate 1s linear infinite;
+        }
+        
+        @keyframes animate {
+            0% {
+                width: 0;
+                height: 0;
+                opacity: 0.2;
+            }
+            100% {
+                width: 500px;
+                height: 500px;
+                opacity: 0.1;
+            }
+        }    
+          
+        &:hover{
+            
+            background:#000;
+            
+        }
+        }
+        
         
     }
-    .btn-check:checked + .btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check) + .btn:active{
-        background-color: #ED1C24;
-    }
+    // .btn-check:checked + .btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check) + .btn:active{
+    //     background-color: #ED1C24;
+    // }
     
-}   
 
+.myheader{
+    border-bottom: 1px solid rgba(0,0,0,0.10);
+    .headerwrapper{
+        height: 50px; 
+        align-items: center;
+        
+    }   
+}
 .headerwrapper{
-    padding:15px;
+    
     align-items: center;
     flex-wrap: inherit;
     justify-content: space-between;
@@ -42,15 +217,19 @@
     display: flex;
         @include media(xsmDevice){
             width:100%;
+            padding:15px;
         }
     @include media(smDevice){
         width:100%;
+        padding:15px;
     }
     @include media(mdDevice){
         width:100%;
+        padding:15px;
     }
     @include media(lgDevice){
         width:90%;
+        padding:0;
     }
     
         .navabrbutton{
@@ -119,7 +298,11 @@
     top:0;
     left:0;
     z-index: 999;
-    
+    padding:0!important;
+    .headerwrapper{
+        height: 100px;
+
+    }
     .navbar-nav{
         margin-left: 16px;
        
@@ -174,6 +357,7 @@
 }
 
 .mybanner{
+    
     .bannersmallboxcenter{
         @include media(xsmDevice){
             text-align: center;
@@ -238,7 +422,7 @@
             top: -68px;
             right: -57px;
             height: 676px; 
-            z-index: 999; 
+            z-index: 888; 
             @include media(xsmDevice){
                 top: -36px;
                 right: 50%;
@@ -257,33 +441,7 @@
         }
         
     }
-    h3{
-        @include myfont(60px,600,$main_font);
-        @include media(xsmDevice){
-            
-            @include myfont(30px,600,$main_font);
-        }
-        @include media(smDevice){
-            @include myfont(45px,600,$main_font);
-        }
-        @include media(lgDevice){
-            @include myfont(50px,600,$main_font);
-        }
-        span{
-            @include myfont(60px,700,$main_font);
-            @include media(xsmDevice){
-                
-                @include myfont(32px,600,$main_font);
-            }
-            @include media(smDevice){
-                @include myfont(50px,600,$main_font);
-            }
-            @include media(lgDevice){
-                @include myfont(53px,600,$main_font);
-            }
-
-        }
-    }
+    
     .bannerbgimg{
         img{
             position:absolute;
@@ -294,6 +452,37 @@
         }
     }
     .bannertext{
+        .bntxinner{
+            position:relative;
+        }
+        h3{
+            @include myfont(60px,600,$main_font);
+            @include media(xsmDevice){
+                
+                @include myfont(30px,600,$main_font);
+            }
+            @include media(smDevice){
+                @include myfont(45px,600,$main_font);
+            }
+            @include media(lgDevice){
+                @include myfont(50px,600,$main_font);
+            }
+            p{
+                
+                @include myfont(60px,700,$main_font);
+                @include media(xsmDevice){
+                    
+                    @include myfont(32px,600,$main_font);
+                }
+                @include media(smDevice){
+                    @include myfont(50px,600,$main_font);
+                }
+                @include media(lgDevice){
+                    @include myfont(53px,600,$main_font);
+                }
+    
+            }
+        }
         p{
             @include myfont(16px,400,$main_font);
             width:87%;
@@ -303,12 +492,21 @@
            
         }
         .common_button{
+            
             button{
                 padding:16px 64px;
                 margin-top: 15px;
                 margin-bottom: 60px;
                 @include media(xsmDevice){
                     padding: 12px 34px;
+                }
+
+                   
+                
+                &:hover{
+                    
+                    background:#000;
+                    
                 }
             }
         }
@@ -411,7 +609,12 @@
     padding:70px 0;
     
 }
-
+.noticebt{
+    text-align: center;
+    a{
+        top:50px;
+    }
+}
 .noticepart{
     padding: 20px 0;
     .noticecontent{
@@ -434,23 +637,44 @@
             }
         }
         .noticebox{
+            &.noticeboxmiddle{
+                left:50%;
+                transform:translateX(-50%);
+            }
+            &.noticeboxright{
+                left:calc(100% - 288px);
+                @include media(lgDevice){
+                    left:0;
+                }
+                @include media(mdDevice){
+                    left:50%;
+                    transform:translateX(-50%);
+                }
+            }
+            &.noticeboxleft{
+                @include media(lgDevice){
+                    left:calc(100% - 288px);
+
+                }
+                @include media(mdDevice){
+                    left:50%;
+                    transform:translateX(-50%);
+                }
+            }
             border:1px solid rgba(0, 0, 0,0.2);
             width:288px;
             height:350px;
             border-radius: 20px;
             padding:27px 22px;
             transition: 0.4s;
-            &:hover{
-                background-color: #ED1C24;
-                color:#fff;
-            }
+
             @include media(xsmDevice){
                 width:100%;
                 height: auto;
                 margin-bottom: 25px!important;
             }
             @include media(lgDevice){
-                width:100%;
+                width:288px;
                 height: auto;
                 margin-bottom: 25px!important;
             }

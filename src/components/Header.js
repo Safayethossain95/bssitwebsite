@@ -6,7 +6,7 @@ import {Row,Col} from 'react-bootstrap'
 const Header = () => {
   return (
     <>
-          
+        <div className='myheader'>
         <div className="headerwrapper">
             <Col lg={6} sm={6} md={7}>
               <div className="headerinfoleft">
@@ -23,6 +23,8 @@ const Header = () => {
                   <span><Link to="/login">Login</Link> |</span> <Link to="/">Bill Pay</Link>
               </div>
             </Col>
+        </div>
+
         </div>
           
             
