@@ -2,6 +2,7 @@
 @import '../sassStyles/variables';
 @import '../sassStyles/typography';
 @import '../sassStyles/global';
+@import '../sassFiles//sassPages/aboutUs.scss';
 a,
 a:hover,
 a:focus { text-decoration: none;
@@ -546,7 +547,7 @@ a:focus { text-decoration: none;
             }
         
     }
-    .aboutuscontent{   
+    .aboutuscontent,.ourmissionaboutuscontent{   
         img{
             @include media(xsmDevice){
                 margin-bottom: 40px;
@@ -1142,15 +1143,12 @@ a:focus { text-decoration: none;
 
                     @include media(xsmDevice){
                         margin-top: 30px;
-
                     }
                     @include media(smDevice){
                         margin-top: 30px;
-
                     }
                     @include media(mdDevice){
                         margin-top: 30px;
-
                     }
                 }
             }

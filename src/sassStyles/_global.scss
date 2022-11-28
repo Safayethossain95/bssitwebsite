@@ -2,6 +2,9 @@
     padding:0;
     margin:0;
 }
+html {
+    scroll-behavior: smooth;
+  }
 body{
     overflow-x: hidden;
 }
@@ -31,4 +34,11 @@ p{
   top: 0;
   width: 100%;
   background:#fff;
+}
+
+.myheadline h1{
+    @include myfont(60px,600,$main_font);
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 130px;
 }

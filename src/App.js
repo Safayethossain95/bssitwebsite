@@ -12,6 +12,8 @@ import Homepage from './pages/Homepage';
 import Login from './pages/Login';
 import TestPage from './pages/TestPage';
 import $ from 'jquery';
+import AboutUsPage from './pages/AboutUsPage';
+
 function App() {
   useEffect(()=>{
     
@@ -53,9 +55,9 @@ function App() {
     <>
     <BrowserRouter>
         <Routes>
-          <Route exact path="/" element={<Homepage/>} />
-           
+          <Route exact path="/" element={<Homepage/>} />           
           <Route path="/login" element={<Login/>}/>
+          <Route path="/aboutus" element={<AboutUsPage/>}/>
           <Route path="/test" element={<TestPage/>}/>
         </Routes>
     </BrowserRouter>
