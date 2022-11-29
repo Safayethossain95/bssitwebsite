@@ -1,42 +1,22 @@
-import React from 'react'
+import React,{useRef} from 'react'
 import HeadlineOfOtherPage from './subComponents/HeadlineOfOtherPage'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {Button} from 'react-bootstrap';
+import {BsArrowLeft,BsArrowRight} from 'react-icons/bs'
+import CommonButton from './subComponents/CommonButton';
 const GalleryAboutPage = () => {
+
+    const slider = React.useRef(null);
     
-    function SampleNextArrow(props) {
-
-        
-
-        const { className, style, onClick } = props;
-        return (
-            <div
-            className="next slick-next"
-            onClick={onClick}
-            />
-            );
-        }
-        function SamplePrevArrow(props) {
-            const { className, style, onClick } = props;
-            return (
-              <div
-                className={className}
-                style={{ ...style, display: "block", background: "green" }}
-                onClick={onClick}
-              />
-            );
-          }
         var settings = {
-            dots: true,
+            dots: false,
             infinite: true,
             speed: 500,
             slidesToShow: 3,
             slidesToScroll: 1,
-            arrows:true,
-            nextArrow:<SampleNextArrow/>,
-            prevArrow:<SamplePrevArrow/>
+            arrows:false
           };
   return (
     <>
@@ -44,29 +24,39 @@ const GalleryAboutPage = () => {
             <div className="galleryaboutpage" style={{padding:"0 50px"}}>
             <HeadlineOfOtherPage headline="Gallery"/>
 
-            
-           
+            <div className="gallery-slider">
+                <button className='prevbutton' onClick={() => slider?.current?.slickPrev()}><BsArrowLeft/></button>
+                <button className="nextbutton" onClick={() => slider?.current?.slickNext()}><BsArrowRight/></button>
 
-                <Slider {...settings}>
-                <div>
-                    <h3>1</h3>
-                </div>
-                <div>
-                    <h3>2</h3>
-                </div>
-                <div>
-                    <h3>3</h3>
-                </div>
-                <div>
-                    <h3>4</h3>
-                </div>
-                <div>
-                    <h3>5</h3>
-                </div>
-                <div>
-                    <h3>6</h3>
-                </div>
-                </Slider>
+                    <Slider ref={slider} {...settings}>
+                    <div>
+                        <div className="galimg">
+                            <img src="./assets/images/gallerybaoutpageimg1.png" alt="gallerybaoutpageimg1" />
+                        </div>
+                    </div>
+                    <div>
+                        <div className="galimg">
+                            <img src="./assets/images/galleryaboutpageimg2.png" alt="galleryaboutpageimg2" />
+                        </div>
+                        
+                    </div>
+                    <div>
+                    <div className="galimg">
+                            <img src="./assets/images/galleryaboutpageimg3.png" alt="galleryaboutpageimg2" />
+                        </div>
+                    </div>
+                    <div>
+                    <div className="galimg">
+                            <img src="./assets/images/galleryaboutpageimg2.png" alt="galleryaboutpageimg2" />
+                        </div>
+                    </div>
+                 
+                    </Slider>
+
+            </div>
+            <div className="gallerybuttonviewall">
+                <CommonButton buttonTitle="View All" />
+            </div>
             
            
             </div>

@@ -51,6 +51,31 @@
 }
 .redcardwithtext{
     margin-bottom: 36px;
+    &:hover{
+        .redcardleft{
+
+            img{
+
+                animation: redcardanime 2s linear infinite;
+            }
+        }
+    }
+    @keyframes redcardanime{
+        0%{
+            transform: rotate(0deg);
+        }
+        50%{
+            transform:rotate(10deg);
+        }
+        75%{
+            transform:rotate(-10deg);
+        }
+        100%{
+            transform: rotate(0deg);
+        }
+        
+        
+    }
     .redcardleft{
         display: flex;
         align-items: center;
@@ -59,6 +84,8 @@
         height:119px;
         border:1px solid rgba(0,0,0,0.2);
         border-radius: 20px;
+        
+        
     }
     .redcardright{
         display: flex;
@@ -133,20 +160,53 @@
 }
 
 .galleryaboutpage{
-    
-        
-         
-    .next {
-        display: block;
-        background: url('../../../public/assets/images/slickleft.png');
-        background:red;
-        width:50px;
-        height:50px;
-      }
-      .next:hover{
-        display: block;
-        background:purple!important;
-      }
+    .gallerybuttonviewall{
+        .read-more{
+            text-align: center;
+            margin-bottom: 97px;
+        }
+    }
+    .myheadline{
+        h1{
+            margin-bottom: 57px;
+        }
+    }
+    .gallery-slider{
+        position: relative;
+        margin-bottom: 70px;
+        .galimg{
+            img{
+                width:100%;
+            }
+        }
+        .slick-slide{
+            padding:0 12px;
+        }
+        .prevbutton{
+            position: absolute;
+            top:50%;
+            left:-75px;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            padding:20px 18px;
+            background-color: #fff;
+            border:1px solid rgba(0,0,0,0.2);
+            border-radius: 10px;
+        }
+        .nextbutton{
+            position: absolute;
+            top:50%;
+            right:-75px;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            padding:20px 18px;
+            background-color: #fff;
+            border:1px solid rgba(0,0,0,0.2);
+            border-radius: 10px;
+        }
+    }
 
     
 }

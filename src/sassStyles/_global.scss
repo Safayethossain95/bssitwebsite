@@ -33,7 +33,9 @@ p{
   position: fixed!important;
   top: 0;
   width: 100%;
+  z-index: 1030;
   background:#fff;
+  border-bottom: 1px solid rgba(0,0,0,0.5);
 }
 
 .myheadline h1{
@@ -41,4 +43,27 @@ p{
     text-align: center;
     margin-top: 40px;
     margin-bottom: 130px;
+}
+
+.headlinemargin{
+    margin-top: 100px;
+}
+
+.scrolltop{
+    position: fixed;
+    width: 50px;
+    right:20px;
+    bottom: 40px;
+    height: 50px;
+    font-size: 3rem;
+    z-index: 1;
+    cursor: pointer;
+    color: #ED1C24;
+    transition:0.4s;
+    opacity: 0;
+    visibility: hidden;
+}
+.visibleclass{
+    opacity: 1;
+    visibility: visible;
 }

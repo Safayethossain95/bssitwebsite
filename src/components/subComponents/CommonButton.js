@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const CommonButton = (props) => {
   
@@ -6,7 +7,7 @@ const CommonButton = (props) => {
   return (
     <>
         <div className={`read-more navabrbutton ${props.displaynone} ${props.bannerbt} ${props.noticebt} ${props.eventbt}`}>
-        <a href="#"><span></span>{props.buttonTitle} <div className="hiddenhover">{props.buttonTitle}</div> </a>
+        <Link to="/"><span></span>{props.buttonTitle}</Link>
         </div>
     </>
   )

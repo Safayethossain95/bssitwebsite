@@ -15,42 +15,7 @@ import $ from 'jquery';
 import AboutUsPage from './pages/AboutUsPage';
 
 function App() {
-  useEffect(()=>{
-    
-    
-    var navbar = document.getElementById("navbar");
-    var sticky = navbar.offsetTop;
-    
-    function myFunction() {
-      if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky")
-      } else {
-        navbar.classList.remove("sticky");
-      }
-    }
-    window.onscroll = function() {myFunction()};
-    $(function() {
-      
-      let x,y;
-      $(".noticebox").on('mouseenter', function(e) {
-        x = e.pageX - $(this).offset().left;
-        y = e.pageY - $(this).offset().top;
-        $(this).find("span").css({
-          top: y,
-          left: x
-        });
-      });
-      $(".noticebox").on('mouseout', function(e) {
-        x = e.pageX - $(this).offset().left;
-        y = e.pageY - $(this).offset().top;
-        $(this).find("span").css({
-          top: y,
-          left: x
-        });
-      });
-    });
 
-  },[])
   return (
     <>
     <BrowserRouter>
