@@ -2,7 +2,9 @@
 @import '../sassStyles/variables';
 @import '../sassStyles/typography';
 @import '../sassStyles/global';
-@import '../sassFiles//sassPages/aboutUs.scss';
+@import '../sassFiles/sassPages/aboutUs.scss';
+@import '../sassFiles/sassPages/noticePage.scss';
+@import '../sassFiles/sassPages/loginPage.scss';
 a,
 a:hover,
 a:focus { text-decoration: none;
@@ -19,10 +21,10 @@ a:focus { text-decoration: none;
     color: #fff;
     background-color: #ED1C24;
     display: inline-block;
-    @include myfont(16px,500,$button_font);
+    @include myfont(16px,400,$button_font);
     border-radius: 10px;
    
-    padding: 16px 32px;
+    padding: 16px 43px;
     
     
   }
@@ -193,7 +195,7 @@ a:focus { text-decoration: none;
     transition: 0.4s;
     border-bottom: 1px solid rgba(0,0,0,0.10);
     .headerwrapper{
-        height: 50px; 
+        height: 38px; 
         align-items: center;
         
     }   
@@ -262,8 +264,9 @@ a:focus { text-decoration: none;
         display: inline-block;
         margin-right: 16px;
         span{
+            font-size: 12px;
             @include media(xsmDevice){
-                font-size: 14px;
+                font-size: 12px;
             }
         }
     }
@@ -272,7 +275,7 @@ a:focus { text-decoration: none;
 .headerinforight{
     text-align: right;
     a{
-        @include myfont(16px,400,$main_font);
+        @include myfont(12px,400,$main_font);
         text-decoration: none;
         color:#000;
         @include media(xsmDevice){
@@ -291,7 +294,19 @@ a:focus { text-decoration: none;
     z-index: 999;
     padding:0!important;
     .headerwrapper{
-        height: 100px;
+        height: 62px;
+        .read-more{
+            &>a{
+                padding: 9px 23px;
+            }
+        }
+        .navbar-brand{
+            a{
+                img{
+                    width: 60px;
+                }
+            }
+        }
 
     }
     .navbar-nav{
@@ -299,7 +314,7 @@ a:focus { text-decoration: none;
        
               
                 a{
-                    @include myfont(18px,400,$main_font);
+                    @include myfont(16px,400,$main_font);
                     color:$main_font_color;
                     margin:0 15px;
                     padding:0; 
@@ -309,7 +324,7 @@ a:focus { text-decoration: none;
                     text-decoration: none;
                     &:hover{
                         color:#ED1C24;
-                        text-shadow: 0 0 1px #ED1C24, 0 0 1px #ED1C24;
+                        
                     }  
                   
                     @include media(xsmDevice){
@@ -471,17 +486,29 @@ a:focus { text-decoration: none;
                 @include media(lgDevice){
                     @include myfont(53px,600,$main_font);
                 }
+                @include media(xlgDevice){
+                    @include myfont(51px,700,$main_font);
+
+                }
     
             }
         }
         p{
             @include myfont(16px,400,$main_font);
-            width:87%;
+            
             @include media(xsmDevice){
                 width:100%;
             }
-           
+            &.bannerdetailsp{
+                width:80%;
+                @include media(xlgDevice){
+                    width: 85%;
+                }
+            }
+            
+            
         }
+        
         .common_button{
             
             button{
@@ -584,7 +611,7 @@ a:focus { text-decoration: none;
                 }
             }
             button{
-                padding:16px 65px!important;
+                
                 margin-top:40px;
                 @include media(xsmDevice){
                     padding:16px 32px!important;
@@ -593,6 +620,11 @@ a:focus { text-decoration: none;
                 @include media(smDevice){
                     padding:16px 32px!important;
                     margin:0 auto;
+                }
+            }
+            .read-more{
+                &>a{
+                    padding:16px 65px
                 }
             }
         }
@@ -606,98 +638,103 @@ a:focus { text-decoration: none;
         top:50px;
     }
 }
-.noticepart{
-    padding: 20px 0;
-    .noticecontent{
-        padding:70px 0;
+.noticecontent{
+    padding:70px 0;
+    @include media(xsmDevice){
+        padding: 35px 0;
+    }
+    @include media(smDevice){
+        padding: 0;
+    }
+    @include media(mdDevice){
+        padding: 35px 0 0 0;
+    }
+    button{
+        margin:65px auto 0px auto;
+        padding:16px 42px;
         @include media(xsmDevice){
-            padding: 35px 0;
+            margin:0px auto 0px auto;
+            
         }
-        @include media(smDevice){
-            padding: 0;
+    }
+    .read-more{
+        &>a{
+            margin-top: 60px;
         }
-        @include media(mdDevice){
-            padding: 35px 0 0 0;
+    }
+    .noticebox{
+        &.noticeboxmiddle{
+            left:50%;
+            transform:translateX(-50%);
         }
-        button{
-            margin:65px auto 0px auto;
-            padding:16px 42px;
-            @include media(xsmDevice){
-                margin:0px auto 0px auto;
-                
+        &.noticeboxright{
+            left:calc(100% - 288px);
+            @include media(lgDevice){
+                left:0;
             }
-        }
-        .noticebox{
-            &.noticeboxmiddle{
+            @include media(mdDevice){
                 left:50%;
                 transform:translateX(-50%);
             }
-            &.noticeboxright{
-                left:calc(100% - 288px);
-                @include media(lgDevice){
-                    left:0;
-                }
-                @include media(mdDevice){
-                    left:50%;
-                    transform:translateX(-50%);
-                }
-            }
-            &.noticeboxleft{
-                @include media(lgDevice){
-                    left:calc(100% - 288px);
-
-                }
-                @include media(mdDevice){
-                    left:50%;
-                    transform:translateX(-50%);
-                }
-            }
-            border:1px solid rgba(0, 0, 0,0.2);
-            width:288px;
-            height:350px;
-            border-radius: 20px;
-            padding:27px 22px;
-            transition: 0.4s;
-
-            @include media(xsmDevice){
-                width:100%;
-                height: auto;
-                margin-bottom: 25px!important;
-            }
+        }
+        &.noticeboxleft{
             @include media(lgDevice){
-                width:288px;
-                height: auto;
-                margin-bottom: 25px!important;
+                left:calc(100% - 288px);
+
             }
-            &.noticelastbox{
-                @include media(mdDevice){
-                    margin-top: 35px !important;
-                }
+            @include media(mdDevice){
+                left:50%;
+                transform:translateX(-50%);
             }
-            @include media(smDevice){
-                margin-top: 35px!important;
+        }
+        border:1px solid rgba(0, 0, 0,0.2);
+        width:288px;
+        height:350px;
+        border-radius: 20px;
+        padding:27px 22px;
+        transition: 0.4s;
+
+        @include media(xsmDevice){
+            width:100%;
+            height: auto;
+            margin-bottom: 25px!important;
+        }
+        @include media(lgDevice){
+            width:288px;
+            height: auto;
+            margin-bottom: 25px!important;
+        }
+        &.noticelastbox{
+            @include media(mdDevice){
+                margin-top: 35px !important;
             }
-            .noticeheading{
-                h4{
-                    @include myfont(20px,500,$main_font);
-                    span{
-                        @include myfont(40px,600,$main_font);
-                        
-                    }
-                }
-            }
-            p{
-                width:230px;
-                @include myfont(16px,400,$main_font);
-                @include media(xsmDevice){
-                    width:100%;
-                }
-                @include media(lgDevice){
-                    width:96%;
+        }
+        @include media(smDevice){
+            margin-top: 35px!important;
+        }
+        .noticeheading{
+            h4{
+                @include myfont(20px,500,$main_font);
+                span{
+                    @include myfont(40px,600,$main_font);
+                    
                 }
             }
         }
+        p{
+            width:230px;
+            @include myfont(16px,400,$main_font);
+            @include media(xsmDevice){
+                width:100%;
+            }
+            @include media(lgDevice){
+                width:96%;
+            }
+        }
     }
+}
+.noticepart{
+    padding: 20px 0;
     h3{
         text-align: center;
         @include myfont(40px,600,$main_font);
@@ -713,6 +750,9 @@ a:focus { text-decoration: none;
     h3{
         text-align: center;
         @include myfont(40px,600,$main_font);
+    }
+    .ourmethodcards{
+        padding-top: 45px;
     }
     .wcuheadingp{
         p{
@@ -797,7 +837,7 @@ a:focus { text-decoration: none;
     }
 }
 .learnfaw{
-    margin:100px 0;
+    margin:60px 0 100px 0;
     @include media(xlgDevice){
         position:relative;
 

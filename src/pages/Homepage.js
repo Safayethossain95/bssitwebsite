@@ -62,10 +62,10 @@ const Homepage = () => {
         <Mynavbar/>
         <Banner/>
         <AboutUs/>
-        <Notice/>
         <WhyChooseUs/>
-        <LearnFromAnywhere/>
         <EventAndNews/>
+        <Notice/>
+        <LearnFromAnywhere/>
         <ScrollTop/>
         <Footer/>
     </>

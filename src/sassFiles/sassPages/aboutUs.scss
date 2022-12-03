@@ -51,31 +51,31 @@
 }
 .redcardwithtext{
     margin-bottom: 36px;
-    &:hover{
-        .redcardleft{
+    // &:hover{
+    //     .redcardleft{
 
-            img{
+    //         img{
 
-                animation: redcardanime 2s linear infinite;
-            }
-        }
-    }
-    @keyframes redcardanime{
-        0%{
-            transform: rotate(0deg);
-        }
-        50%{
-            transform:rotate(10deg);
-        }
-        75%{
-            transform:rotate(-10deg);
-        }
-        100%{
-            transform: rotate(0deg);
-        }
+    //             animation: redcardanime 2s linear infinite;
+    //         }
+    //     }
+    // }
+    // @keyframes redcardanime{
+    //     0%{
+    //         transform: rotate(0deg);
+    //     }
+    //     50%{
+    //         transform:rotate(10deg);
+    //     }
+    //     75%{
+    //         transform:rotate(-10deg);
+    //     }
+    //     100%{
+    //         transform: rotate(0deg);
+    //     }
         
         
-    }
+    // }
     .redcardleft{
         display: flex;
         align-items: center;
