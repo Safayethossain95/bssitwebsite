@@ -5,7 +5,7 @@ const WhyChooseUSMobile = () => {
   return (
     <>
         <div className="mobilecontainer">
-            <div className="whychooseusmobile">
+            <div className="whychooseusmobile" data-aos="fade-up" data-aos-duration="2000">
             <div className="heading">
                     <h4>Why Choose Us</h4>
                 </div>

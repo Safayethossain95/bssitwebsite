@@ -4,7 +4,7 @@ const LearnFromAnywhereMobile = () => {
   return (
     <>
         <div className="mobilecontainer">
-            <div className="learnfromanywheremobile">
+            <div className="learnfromanywheremobile" data-aos="fade-up" data-aos-duration="2000">
                 <img src="./assets/images/mobile/eventandnewsmobileimg.png" alt="" />
                 <div className="heading">
                     <h4>Learn From Anywhere</h4>

@@ -1,16 +1,42 @@
 import React from 'react'
 import CommonButton from '../subComponents/CommonButton'
-
+import { Parallax } from 'react-parallax';
 const BannerMobile = () => {
     
   return (
     <>
-    <div className="mobilecontainer">
-        <div className="bannermobile">
-        <div className="bannermobilebg">
+    <div className="fullwidth">
+    <div className="bannermobilebg">
             <img src="./assets/images/mobile/BG_Logo_full.png" alt="BG_Logo_full" />
         </div>
-            <div className="bannermobileimg">
+        <div className="mobilecontainer2">
+        <div className="bannermobile">
+        
+        <Parallax  bgImage="./assets/images/mobile/homepagemobilemainimg.png" bgImageAlt="the cat" strength={500}>
+        
+        <div className="bluroverlay">
+
+                </div>
+                <div className="content">
+                    <div className="mobilecontainer">
+                <div className="bannermobileimgoverlay">
+                    <div className="textpartov">
+                    <h4>Welcome to</h4>
+                    <p>British Standard School</p>
+
+                    </div>
+                    <div className="textparagraph">
+                        <p>"Education is the manifestation of perfection already in man." It is true that every individual has education in them but it is the school that gives them the shape to become the enlightened one. So join school, join BSS!!</p>
+                    </div>
+                    <CommonButton buttonTitle="Learn More"/>
+                    </div>
+
+                    </div>
+
+                </div>
+        </Parallax>
+        
+            {/* <div className="bannermobileimg">
                 <img src="./assets/images/mobile/homepagemobilemainimg.png" alt="homepagemobilemainimg" />
                 <div className="bluroverlay">
 
@@ -28,7 +54,8 @@ const BannerMobile = () => {
                 </div>
 
 
-            </div>
+            </div> */}
+            <div className="mobilecontainer">
 
             <div className="bannercardssmall">
                 <div className="bannercardsmallsinglebox">
@@ -46,9 +73,12 @@ const BannerMobile = () => {
                     <p><span>50+</span>  Expert teacher teaches our students</p>
                 </div>
             </div>
+            </div>
         </div>
 
     </div>
+    </div>
+   
     </>
   )
 }

@@ -4,7 +4,7 @@ const AboutUsMobile = () => {
   return (
     <>
         <div className="mobilecontainer">
-            <div className="aboutuspartmobile">
+            <div className="aboutuspartmobile" data-aos="fade-up" data-aos-duration="2000">
                 <div className="heading">
                     <h4>About Us</h4>
                 </div>

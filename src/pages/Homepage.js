@@ -102,7 +102,7 @@ useEffect(()=>{
 
 },[])
 $(document).ready(function(){
-	$('#nav-icon3').click(function(){
+	$('#nav-icon4').click(function(){
 		$(this).toggleClass('open');
 	});
 });

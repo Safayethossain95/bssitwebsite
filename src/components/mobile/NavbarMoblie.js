@@ -23,12 +23,11 @@ const NavbarMoblie = () => {
                     <Link to="/"><img src="./assets/images/Logo.svg" alt="logo" /></Link>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" >
-                <div id="nav-icon3">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
+                <div id="nav-icon4">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
                 </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ms-auto">
