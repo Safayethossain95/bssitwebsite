@@ -4,7 +4,7 @@ const Wcuboxwithcontent = (props) => {
   return (
     
     <>
-        <div className="wcumobilebox">
+        <div className={`wcumobilebox ${props.classChange}`}>
             <div className="wcumobileboximgwrapper">
             <img style={{width:`${props.imgwidth}`}} src={props.imgsrc} alt="wcucardicon1.png" />
 

@@ -10,10 +10,16 @@ const NavbarMoblie = () => {
       };
       useEffect(()=>{
         $(".navbar-toggler").click(function(){
+         
+          $(".mynavbarnav").toggleClass("show");
           $(".mynavbarmb").toggleClass("navbar-white");
-          })
-      
+        })
     },[])
+    // $(".navbar-toggler").click(function(){
+    //   $(".mynavbarmb").toggleClass("navbar-white");
+    //   $(".mynavbarnav").toggleClass("show");
+    // })
+    
   return (
     <>
         <Navbar id="navbarmini" className="mynavbarmb" expand="lg">
@@ -22,15 +28,15 @@ const NavbarMoblie = () => {
                 <Navbar.Brand>
                     <Link to="/"><img src="./assets/images/Logo.svg" alt="logo" /></Link>
                 </Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" >
+                <div  className="navbar-toggler" aria-controls="basic-navbar-nav" >
                 <div id="nav-icon4">
                   <span></span>
                   <span></span>
                   <span></span>
                 </div>
-                </Navbar.Toggle>
-                <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="ms-auto">
+                </div>
+                {/* <Navbar.Collapse id="basic-navbar-nav"> */}
+                <Nav className="mynavbarnav">
                     <NavLink to="/" 
                     style={({ isActive }) =>
                       isActive ? activeStyle : undefined
@@ -56,10 +62,11 @@ const NavbarMoblie = () => {
                       isActive ? activeStyle : undefined
                     }
                     >Contact</NavLink>
-                    
+                    <CommonButton classChange="whitebuttonbg" buttonTitle="Bill Pay"/>
+                    <CommonButton buttonTitle="Login"/>
                 </Nav>
                 
-                </Navbar.Collapse>
+                {/* </Navbar.Collapse> */}
             
             </div>
             </Navbar>

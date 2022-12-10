@@ -11,6 +11,10 @@ import HeadlineOfOtherPage from '../components/subComponents/HeadlineOfOtherPage
 import TransportServiceAboutUsPage from '../components/TransportServiceAboutUsPage'
 import Footer from '../components/Footer'
 import ScrollTop from '../components/subComponents/ScrollTop'
+import NavbarMoblie from '../components/mobile/NavbarMoblie'
+import AboutUsBreadCrumb from '../components/mobile/AboutUsBreadCrumb'
+import OurMethodAboutPageMobile from '../components/mobile/OurMethodAboutPageMobile'
+import OurVisionAboutPageMb from '../components/mobile/OurVisionAboutPageMb'
 const AboutUsPage = () => {
   useEffect(()=>{
     
@@ -34,7 +38,13 @@ const AboutUsPage = () => {
   },[])
   return (
     <>
-        <div className="aboutpage">
+        <div className="mobile">
+          <NavbarMoblie/>
+          <AboutUsBreadCrumb/>
+          <OurMethodAboutPageMobile/>
+          <OurVisionAboutPageMb/>
+        </div>
+        <div className="aboutpage desktop">
             <Header/>
             <Mynavbar/>
             <HeadlineOfOtherPage headline="About Us"/>
