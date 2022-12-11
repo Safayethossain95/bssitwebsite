@@ -28,7 +28,7 @@ const BannerMobile = () => {
                     <div className="textparagraph">
                         <p>"Education is the manifestation of perfection already in man." It is true that every individual has education in them but it is the school that gives them the shape to become the enlightened one. So join school, join BSS!!</p>
                     </div>
-                    <CommonButton buttonTitle="Learn More"/>
+                    <CommonButton classChange="bannermb" buttonTitle="Learn More"/>
                     </div>
 
                     </div>

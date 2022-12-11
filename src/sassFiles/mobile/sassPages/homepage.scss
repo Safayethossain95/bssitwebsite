@@ -361,7 +361,7 @@ body{
 .learnfromanywheremobile{
     .heading{
         h4{
-            @include myfont(25px,500,$main_font);
+            @include myfont(25px,600,$main_font);
             
             margin: 10px 0!important;
         }
@@ -647,12 +647,13 @@ body{
 }
 .bannermobileimgoverlay{
     position:absolute;
-    top:314px;
-    width: 100%;
+    top:314px;    
     background: #fff;
-   
+   .bannermb{
+    text-align: center;
+   }
     .read-more{
-        margin:30px 0;
+        margin:30px auto;
     }
     .textpartov{
         

@@ -35,7 +35,7 @@ const NavbarMoblie = () => {
                   <span></span>
                 </div>
                 </div>
-                {/* <Navbar.Collapse id="basic-navbar-nav"> */}
+                
                 <Nav className="mynavbarnav">
                     <NavLink to="/" 
                     style={({ isActive }) =>
@@ -66,7 +66,7 @@ const NavbarMoblie = () => {
                     <CommonButton buttonTitle="Login"/>
                 </Nav>
                 
-                {/* </Navbar.Collapse> */}
+                
             
             </div>
             </Navbar>

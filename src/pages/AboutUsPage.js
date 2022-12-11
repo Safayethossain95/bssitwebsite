@@ -15,6 +15,10 @@ import NavbarMoblie from '../components/mobile/NavbarMoblie'
 import AboutUsBreadCrumb from '../components/mobile/AboutUsBreadCrumb'
 import OurMethodAboutPageMobile from '../components/mobile/OurMethodAboutPageMobile'
 import OurVisionAboutPageMb from '../components/mobile/OurVisionAboutPageMb'
+import OurObjectivesPartAboutpageMobile from '../components/mobile/OurObjectivesPartAboutpageMobile'
+import TransportServicePartMb from '../components/mobile/TransportServicePartMb'
+import AddresspartSliderMb from '../components/mobile/AddresspartSliderMb'
+import GalleryPartAboutPageMb from '../components/mobile/GalleryPartAboutPageMb'
 const AboutUsPage = () => {
   useEffect(()=>{
     
@@ -43,6 +47,10 @@ const AboutUsPage = () => {
           <AboutUsBreadCrumb/>
           <OurMethodAboutPageMobile/>
           <OurVisionAboutPageMb/>
+          <OurObjectivesPartAboutpageMobile/>
+          <TransportServicePartMb/>
+          <AddresspartSliderMb/>
+          <GalleryPartAboutPageMb/>
         </div>
         <div className="aboutpage desktop">
             <Header/>

@@ -8,6 +8,7 @@ const OurVisionAboutPageMb = () => {
         <div className="mobilecontainer">
         <div className="heading">
                     <h4>Our Vision</h4>
+                <p>To improve the human resources by educating them on all round development of human being i.e. - development of all four levels</p>
                 </div>
                 <div className="wcucardsinourvision">
             <Row>
